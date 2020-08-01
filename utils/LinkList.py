@@ -10,7 +10,7 @@
 from utils.Node import ListNode as Node
 
 
-class LinkList(object):
+class SingleLinkList(object):
     def __init__(self, node=None, *args, **kwargs):
         if node is None:
             self.__head = node
@@ -41,21 +41,21 @@ class LinkList(object):
         """遍历整个链表"""
         cur = self.__head
         while cur is not None:
-            print(cur.item, end=" ")
+            print(cur.val, end=" ")
             cur = cur.next
         print("")
 
-    def add(self, item):
+    def add(self, val):
         """链表头部添加元素
-        :param item: 要保存的具体数据
+        :param val: 要保存的具体数据
         """
-        node = Node(item)
+        node = Node(val)
         node.next = self.__head
         self.__head = node
 
-    def append(self, item):
+    def append(self, val):
         """链表尾部添加元素"""
-        node = Node(item)
+        node = Node(val)
         # 如果链表为空，需要特殊处理
         if self.is_empty():
             self.__head = node
@@ -66,14 +66,14 @@ class LinkList(object):
             # 退出循环的时候，cur指向的尾结点
             cur.next = node
 
-    def insert(self, pos, item):
+    def insert(self, pos, val):
         """指定位置添加元素"""
         # 在头部添加元素
         if pos <= 0:
-            self.add(item)
+            self.add(val)
         # 在尾部添加元素
         elif pos >= self.length():
-            self.append(item)
+            self.append(val)
         else:
             cur = self.__head
             count = 0
@@ -81,17 +81,17 @@ class LinkList(object):
                 count += 1
                 cur = cur.next
             # 退出循环的时候，cur指向pos的前一个位置
-            node = Node(item)
+            node = Node(val)
             node.next = cur.next
             cur.next = node
 
-    def remove(self, item):
+    def remove(self, val):
         """删除节点"""
         cur = self.__head
         pre = None
         while cur is not None:
             # 找到了要删除的元素
-            if cur.item == item:
+            if cur.val == val:
                 # 在头部找到了元素
                 if cur == self.__head:
                     self.__head = cur.next
@@ -102,11 +102,11 @@ class LinkList(object):
             pre = cur
             cur = cur.next
 
-    def search(self, item):
+    def search(self, val):
         """查找节点是否存在"""
         cur = self.__head
         while cur is not None:
-            if cur.item == item:
+            if cur.val == val:
                 return True
             cur = cur.next
         return False
@@ -121,7 +121,24 @@ class LinkList(object):
             for i in range(self.length() - 1):
                 cur = cur.next
                 if cur.next is None:
-                    x = cur.item
-                    self.remove(cur.item)
+                    x = cur.val
+                    self.remove(cur.val)
                     self.insert(j, x)
             j += 1
+
+    def head(self):
+        """返回首节点"""
+        return self.__head
+
+
+if __name__ == '__main__':
+    sll = SingleLinkList()
+    for node_value in [1, 2, 3]:
+        sll.add(node_value)
+    for node_value in [4, 5, 6]:
+        sll.add(node_value)
+    sll.insert(0, 9)
+    print(sll.search(4))
+
+    cur = sll.head()
+    print(cur.val)
