@@ -136,6 +136,4 @@ if __name__ == '__main__':
         sll.add(node_value)
     sll.insert(0, 9)
     print(sll.search(4))
-
-    cur = sll.head()
-    print(cur.val)
+    print(sll._SingleLinkList__head.val)
