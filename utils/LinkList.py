@@ -12,6 +12,7 @@ from utils.Node import ListNode as Node
 
 class SingleLinkList(object):
     def __init__(self, node=None, *args, **kwargs):
+        self._head = 1
         if node is None:
             self.__head = node
         else:
@@ -125,10 +126,6 @@ class SingleLinkList(object):
                     self.remove(cur.val)
                     self.insert(j, x)
             j += 1
-
-    def head(self):
-        """返回首节点"""
-        return self.__head
 
 
 if __name__ == '__main__':

@@ -29,14 +29,12 @@ def offer_06():
     """
 
     sll = SingleLinkList()
-
     for node_val in [1, 3, 2]:
         sll.append(node_val)
-
-    headNode = sll.head()
+    head_node = sll._SingleLinkList__head
 
     solution = Solution()
-    output = solution.reversePrint(headNode)
+    output = solution.reversePrint(head_node)
 
     print(output)
 
