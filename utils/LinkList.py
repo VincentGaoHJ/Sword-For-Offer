@@ -10,6 +10,13 @@
 from utils.Node import ListNode as Node
 
 
+def printSingleLinkList(Node):
+    """Traverse the Link List"""
+    while Node:
+        print(Node.val)
+        Node = Node.next
+
+
 class SingleLinkList(object):
     def __init__(self, node=None, *args, **kwargs):
         self._head = 1
@@ -133,7 +140,7 @@ if __name__ == '__main__':
     for node_value in [1, 2, 3]:
         sll.add(node_value)
     for node_value in [4, 5, 6]:
-        sll.add(node_value)
+        sll.append(node_value)
     sll.insert(0, 9)
     print(sll.search(4))
     print(sll._SingleLinkList__head.val)
