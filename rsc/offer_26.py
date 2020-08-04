@@ -17,19 +17,26 @@ class Solution(object):
         :type B: TreeNode
         :rtype: bool
         """
+        # 如果有一个为空（也就是A为空，因为B不发生变化），那么就说明遍历完了还没有找到子树
         if (A == None or B == None):
             return False
+        # 如果直接给的 A B 两棵树满足条件，直接返回True
         if self.judge_tree(A, B):
             return True
+        # 递归开始判断左子树和右子树
         return self.isSubStructure(A.left, B) or self.isSubStructure(A.right, B)
 
     def judge_tree(self, A, B):
+        # b都遍历完了，还没发现不一样的，说明那就一样了
         if not B:
             return True
+        # 压根就没有a，当然不行
         if not A:
             return False
+        # a b 的值不相等，肯定不行
         if A.val != B.val:
             return False
+        # 开始遍历两个树结构的左子树和右子树判断是否一致
         return self.judge_tree(A.left, B.left) and self.judge_tree(A.right, B.right)
 
 
