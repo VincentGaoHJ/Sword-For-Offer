@@ -19,7 +19,7 @@ def initiate_tree_structure(value_lst):
         raise Exception("The length of three level full binary tree is seven, please check again.")
     TreeNodeLst = []
     for idx, value in enumerate(value_lst):
-        print(f'Add Node: {value}')
+        # print(f'Add Node: {value}')
         if value == 'null':
             TreeNodeLst.append('null')
         else:
@@ -33,6 +33,7 @@ def initiate_tree_structure(value_lst):
 
     print('Pro-order Traverse:', end=' ')
     traverse_tree(TreeNodeLst[0])
+    print('*' * 10, 'Finish Init', '*' * 10)
     return TreeNodeLst[0]
 
 
