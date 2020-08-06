@@ -64,7 +64,7 @@ def offer_28(input_lst):
 
 if __name__ == '__main__':
     # 剑指 Offer 28. 对称的二叉树
-    offer_28([1, 2, 2, 3, 4, 4, 3])
-    offer_28([1, 2, 2, 'null', 3, 'null', 3])
-    offer_28([2, 3, 3, 4, 5, 5, 4])
-    offer_28([2, 3, 3, 4, 5, 5, 'null'])
+    offer_28([1, 2, 2, 3, 4, 4, 3])  # True
+    offer_28([1, 2, 2, 'null', 3, 'null', 3])  # False
+    offer_28([2, 3, 3, 4, 5, 5, 4])  # True
+    offer_28([2, 3, 3, 4, 5, 5, 'null'])  # False
