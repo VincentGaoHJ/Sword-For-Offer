@@ -9,44 +9,40 @@
 from utils.Node import TreeNode as BinaryTree
 
 
-# 二叉树类
-class BinaryTree(object):
-    # 初始化，传入根节点的值
-    def __init__(self, root_value):
-        self.root = root_value
-        self.leftchild = None
-        self.rightchild = None
+def initiate_tree_structure(value_lst):
+    """
 
-    # 插入左子树
-    def insert_left(self, left_value):
-        if self.leftchild == None:
-            self.leftchild = BinaryTree(left_value)
+    :param value_lst: [List]
+    :return:
+    """
+    if len(value_lst) != 7:
+        raise Exception("The length of three level full binary tree is seven, please check again.")
+    TreeNodeLst = []
+    for idx, value in enumerate(value_lst):
+        print(f'Add Node: {value}')
+        if value == 'null':
+            TreeNodeLst.append('null')
         else:
-            left_subtree = BinaryTree(left_value)
-            left_subtree.leftchild = self.leftchild
-            self.leftchild = left_subtree
+            TreeNodeLst.append(BinaryTree(value))
 
-    # 插入右子树
-    def insert_right(self, right_value):
-        if self.rightchild == None:
-            self.rightchild = BinaryTree(right_value)
-        else:
-            right_subtree = BinaryTree(right_value)
-            right_subtree.rightchild = self.rightchild
-            self.rightchild = rightchild
+    for node_inx in range(3):
+        if TreeNodeLst[2 * node_inx + 1] != 'null':
+            TreeNodeLst[node_inx].left = TreeNodeLst[2 * node_inx + 1]
+        if TreeNodeLst[2 * node_inx + 2] != 'null':
+            TreeNodeLst[node_inx].right = TreeNodeLst[2 * node_inx + 2]
 
-    # 设置根节点的值
-    def set_root(self, root_value):
-        self.root = root_value
+    print('Pro-order Traverse:', end=' ')
+    traverse_tree(TreeNodeLst[0])
+    return TreeNodeLst[0]
 
-    # 获取根节点的值
-    def get_root(self):
-        return self.root
 
-    # 获取左子树
-    def get_leftchild(self):
-        return self.leftchild
-
-    # 获取右子树
-    def get_rightchile(self):
-        return self.rightchild
+def traverse_tree(head_node):
+    """
+    :param head_node: [TreeNode]
+    :return:
+    """
+    if head_node is None:
+        return
+    print(head_node.val, end=' ')
+    traverse_tree(head_node.left)
+    traverse_tree(head_node.right)
