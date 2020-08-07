@@ -12,6 +12,7 @@ from utils.Node import ListNode as Node
 
 def printSingleLinkList(Node):
     """Traverse the Link List"""
+    print('Traverse the Link List: ')
     while Node:
         print(Node.val)
         Node = Node.next
