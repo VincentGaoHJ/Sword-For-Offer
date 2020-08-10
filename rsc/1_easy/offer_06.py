@@ -7,7 +7,7 @@
     https://leetcode-cn.com/problems/cong-wei-dao-tou-da-yin-lian-biao-lcof/
 """
 
-from utils.LinkList import SingleLinkList
+from utils.SingleLinkList import SingleLinkList
 
 
 class Solution(object):

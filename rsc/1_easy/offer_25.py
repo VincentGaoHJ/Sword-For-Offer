@@ -6,7 +6,7 @@
 @Sketch : 剑指 Offer 25. 合并两个排序的链表
 """
 
-from utils.LinkList import SingleLinkList, printSingleLinkList
+from utils.SingleLinkList import SingleLinkList, printSingleLinkList
 from utils.Node import ListNode
 
 

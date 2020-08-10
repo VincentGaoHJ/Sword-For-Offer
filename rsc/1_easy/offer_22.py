@@ -7,7 +7,7 @@
     https://leetcode-cn.com/problems/lian-biao-zhong-dao-shu-di-kge-jie-dian-lcof/
 """
 
-from utils.LinkList import SingleLinkList, printSingleLinkList
+from utils.SingleLinkList import SingleLinkList, printSingleLinkList
 from utils.Node import ListNode
 
 

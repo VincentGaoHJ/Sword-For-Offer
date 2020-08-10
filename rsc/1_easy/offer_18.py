@@ -8,7 +8,7 @@
 """
 
 from utils.Node import ListNode
-from utils.LinkList import SingleLinkList, printSingleLinkList
+from utils.SingleLinkList import SingleLinkList, printSingleLinkList
 
 
 class Solution(object):

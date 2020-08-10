@@ -7,7 +7,7 @@
     https://leetcode-cn.com/problems/fan-zhuan-lian-biao-lcof/
 """
 
-from utils.LinkList import SingleLinkList, printSingleLinkList
+from utils.SingleLinkList import SingleLinkList, printSingleLinkList
 from utils.Node import ListNode
 
 
