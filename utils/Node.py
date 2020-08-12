@@ -20,3 +20,15 @@ class TreeNode(object):
         self.val = x
         self.left = None
         self.right = None
+
+
+# Definition for a Complicated Node.
+class ComplicatedNode:
+    def __init__(self, x, next=None, random=None):
+        """
+        在复杂链表中，每个节点除了有一个 next 指针指向下一个节点
+        还有一个 random 指针指向链表中的任意节点或者 null。
+        """
+        self.val = int(x)
+        self.next = next
+        self.random = random
