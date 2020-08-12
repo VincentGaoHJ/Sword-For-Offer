@@ -13,6 +13,9 @@ from utils.Node import ListNode as Node
 def printSingleLinkList(Node):
     """Traverse the Link List"""
     print('Traverse the Link List: ')
+    if not Node:
+        print('There is no node in LinkList.')
+        return None
     while Node:
         print(Node.val)
         Node = Node.next
