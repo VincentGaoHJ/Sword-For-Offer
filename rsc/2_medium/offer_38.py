@@ -14,6 +14,8 @@ class Solution(object):
         :type s: str
         :rtype: List[str]
         """
+
+        # 首先排序，方便后面检查的时候判断是否重复
         s = list(s)
         s.sort()
         s = ''.join(s)
