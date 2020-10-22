@@ -22,7 +22,6 @@ class Solution(object):
             while stack and stack[-1] == popped[i]:
                 stack.pop()
                 i += 1
-
         return not stack
 
 
