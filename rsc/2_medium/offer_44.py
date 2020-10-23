@@ -3,7 +3,8 @@
 @Time   : 2020/10/23  22:05 
 @Author : Haojun Gao (github.com/VincentGaoHJ)
 @Email  : vincentgaohj@gmail.com haojun.gao@u.nus.edu
-@Sketch : 
+@Sketch : 剑指 Offer 44. 数字序列中某一位的数字
+    https://leetcode-cn.com/problems/shu-zi-xu-lie-zhong-mou-yi-wei-de-shu-zi-lcof/
 """
 
 
@@ -27,7 +28,13 @@ class Solution(object):
 
 
 def offer_(n):
-    """"""
+    """
+    数字以 0123456789101112131415… 的格式序列化到一个字符序列中。
+    在这个序列中，第 5 位（从下标 0 开始计数）是 5，第 13 位是 1，第 19 位是 4，等等。
+    请写一个函数，求任意第 n 位对应的数字。
+    :param n:
+    :return:
+    """
     solution = Solution()
     output = solution.findNthDigit(n)
 
@@ -35,4 +42,5 @@ def offer_(n):
 
 
 if __name__ == '__main__':
+    # 剑指 Offer 44. 数字序列中某一位的数字
     offer_(n=3)
