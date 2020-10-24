@@ -27,7 +27,7 @@ class Solution(object):
         return int(str(num)[(n - 1) % digit])
 
 
-def offer_(n):
+def offer_44(n):
     """
     数字以 0123456789101112131415… 的格式序列化到一个字符序列中。
     在这个序列中，第 5 位（从下标 0 开始计数）是 5，第 13 位是 1，第 19 位是 4，等等。
@@ -43,4 +43,4 @@ def offer_(n):
 
 if __name__ == '__main__':
     # 剑指 Offer 44. 数字序列中某一位的数字
-    offer_(n=3)
+    offer_44(n=3)
