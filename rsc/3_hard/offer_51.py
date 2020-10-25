@@ -4,6 +4,7 @@
 @Author : Haojun Gao (github.com/VincentGaoHJ)
 @Email  : vincentgaohj@gmail.com haojun.gao@u.nus.edu
 @Sketch : 剑指 Offer 51. 数组中的逆序对
+    https://leetcode-cn.com/problems/shu-zu-zhong-de-ni-xu-dui-lcof/
 """
 
 
