@@ -3,7 +3,9 @@
 @Time   : 2020/11/24  15:05 
 @Author : Haojun Gao (github.com/VincentGaoHJ)
 @Email  : vincentgaohj@gmail.com haojun.gao@u.nus.edu
-@Sketch : 
+@Sketch : 1. Two Sum
+    https://leetcode-cn.com/problems/two-sum/
+
 """
 
 
