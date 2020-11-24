@@ -3,7 +3,8 @@
 @Time   : 2020/11/24  17:48 
 @Author : Haojun Gao (github.com/VincentGaoHJ)
 @Email  : vincentgaohj@gmail.com haojun.gao@u.nus.edu
-@Sketch : 
+@Sketch : 3. Longest Substring Without Repeating Characters
+    https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/
 """
 
 
