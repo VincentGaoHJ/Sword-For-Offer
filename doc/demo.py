@@ -7,7 +7,7 @@
 """
 
 
-def offer_():
+def solution():
     """"""
     solution = Solution()
     output = solution.maxSubArray()
@@ -16,4 +16,4 @@ def offer_():
 
 
 if __name__ == '__main__':
-    offer_()
+    solution()
