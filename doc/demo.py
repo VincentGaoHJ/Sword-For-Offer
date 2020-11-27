@@ -3,7 +3,8 @@
 @Time   : 2020/10/22  10:23 
 @Author : Haojun Gao (github.com/VincentGaoHJ)
 @Email  : vincentgaohj@gmail.com haojun.gao@u.nus.edu
-@Sketch :
+@Sketch : 5. Longest Palindromic Substring
+    https://leetcode-cn.com/problems/longest-palindromic-substring/
 """
 
 
@@ -38,7 +39,11 @@ class Solution(object):
 
 
 def solution(s):
-    """"""
+    """
+    Given a string s, return the longest palindromic substring in s
+    :param s:
+    :return:
+    """
     solution = Solution()
     output = solution.longestPalindrome(s)
 
@@ -46,6 +51,7 @@ def solution(s):
 
 
 if __name__ == '__main__':
+    # Longest Palindromic Substring
     solution(s="babad")
     solution(s="a")
     solution(s="aba")
