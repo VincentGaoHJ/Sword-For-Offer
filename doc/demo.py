@@ -3,7 +3,7 @@
 @Time   : 2020/10/22  10:23 
 @Author : Haojun Gao (github.com/VincentGaoHJ)
 @Email  : vincentgaohj@gmail.com haojun.gao@u.nus.edu
-@Sketch : 5. Longest Palindromic Substring
+@Sketch : Longest Palindromic Substring
     https://leetcode-cn.com/problems/longest-palindromic-substring/
 """
 
