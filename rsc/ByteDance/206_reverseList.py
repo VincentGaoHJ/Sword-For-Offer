@@ -3,7 +3,8 @@
 @Time   : 2020/11/27  15:33 
 @Author : Haojun Gao (github.com/VincentGaoHJ)
 @Email  : vincentgaohj@gmail.com haojun.gao@u.nus.edu
-@Sketch : 
+@Sketch : Reverse a singly linked list.
+    https://leetcode-cn.com/problems/reverse-linked-list/
 """
 
 
@@ -29,3 +30,5 @@ class Solution(object):
             reverse_head = tmpNode
             head = head.next
         return reverse_head
+
+# Reverse a singly linked list.
