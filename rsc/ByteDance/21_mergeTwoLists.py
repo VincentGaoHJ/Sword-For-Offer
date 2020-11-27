@@ -6,6 +6,8 @@
 @Sketch : Merge Two Sorted Lists
     https://leetcode-cn.com/problems/merge-two-sorted-lists/
 """
+
+
 # Definition for singly-linked list.
 # class ListNode(object):
 #     def __init__(self, val=0, next=None):
