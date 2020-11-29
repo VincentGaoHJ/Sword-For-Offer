@@ -3,7 +3,8 @@
 @Time   : 2020/11/29  16:07 
 @Author : Haojun Gao (github.com/VincentGaoHJ)
 @Email  : vincentgaohj@gmail.com haojun.gao@u.nus.edu
-@Sketch : 
+@Sketch : Merge k Sorted Lists
+    https://leetcode-cn.com/problems/merge-k-sorted-lists/
 """
 
 # Definition for singly-linked list.
@@ -32,3 +33,8 @@ class Solution(object):
             if curr.next:
                 q.put([curr.next.val, curr.next])
         return headNode.next
+
+# Merge k Sorted Lists
+
+# You are given an array of k linked-lists lists, each linked-list is sorted in ascending order.
+# Merge all the linked-lists into one sorted linked-list and return it.
