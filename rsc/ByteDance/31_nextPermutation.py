@@ -14,7 +14,6 @@ class Solution(object):
         :type nums: List[int]
         :rtype: None Do not return anything, modify nums in-place instead.
         """
-        flag = 0
         tmp_max = 0
         pivot_idx = -1
         for idx in range(len(nums) - 1, -1, -1):
