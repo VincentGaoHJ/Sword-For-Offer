@@ -24,6 +24,32 @@ class Solution(object):
         return False
 
 
+class Solution_2(object):
+    def isValid(self, s):
+        """
+        :type s: str
+        :rtype: bool
+        """
+        paren_pair = {
+            ')': '(',
+            '}': '{',
+            ']': '['
+        }
+        stack = []
+        for chara in s:
+            if chara in paren_pair.values():
+                stack.append(chara)
+            elif chara in paren_pair and stack:
+                if stack.pop() != paren_pair.get(chara):
+                    return False
+            else:
+                return False
+        if not stack:
+            return True
+        else:
+            return False
+
+
 def solution(s):
     """
     Given a string s containing just the characters '(', ')', '{', '}', '[' and ']',
@@ -35,6 +61,11 @@ def solution(s):
     :return:
     """
     solution = Solution()
+    output = solution.isValid(s)
+
+    print(output)
+
+    solution = Solution_2()
     output = solution.isValid(s)
 
     print(output)
