@@ -14,6 +14,27 @@ class Solution(object):
         :type num_people: int
         :rtype: int
         """
+        dp = [0] * (num_people + 1)
+        dp[2] = 1
+        num = 4
+        while num <= num_people:
+            tmp_num = 2 * dp[num - 2]
+            k = 2
+            while num - 2 - k > 0:
+                tmp_num += dp[num - 2 - k] * dp[k]
+                k += 2
+            dp[num] = tmp_num
+            num += 2
+
+        return dp[-1] % (1000000000 + 7)
+
+
+class Solution_2(object):
+    def numberOfWays(self, num_people):
+        """
+        :type num_people: int
+        :rtype: int
+        """
         sum_num = 0
         if num_people == 2:
             return 1
@@ -43,7 +64,6 @@ def solution(num_people):
 
 
 if __name__ == '__main__':
-    # 方法并没有通过所有的测试案例
-    # 尝试方向应该将递归改成状态转移
+    # Solution_2 方法并没有通过所有的测试案例
     # Handshakes That Don't Cross
     solution(6)
